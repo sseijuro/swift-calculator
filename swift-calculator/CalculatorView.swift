@@ -5,6 +5,7 @@ class CalculatorView: UIView {
     
     var calculatorButtons: [Button] = Button.getCalculatorButtons()
     
+    var resultArea: UICollectionViewCell?
     var calculatorCollection: UICollectionView = {
         let calculatorCollection = UICollectionView(frame: .zero,
                                                     collectionViewLayout: .getCalculatorCompositionalLayout())
@@ -40,6 +41,11 @@ class CalculatorView: UIView {
             calculatorCollection.topAnchor.constraint(equalTo: safeView.topAnchor),
         ])
         safeView.addSubview(calculatorCollection)
+    }
+    
+    func setResultArea(withTitle title: String) {
+        let label = resultArea?.subviews[0] as? UILabel
+        label?.text = title
     }
     
     required init?(coder: NSCoder) {

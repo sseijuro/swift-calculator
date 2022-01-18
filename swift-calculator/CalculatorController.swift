@@ -20,8 +20,9 @@ class CalculatorController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     @objc func buttonPressed(sender: UIButton) {
-        print(sender.currentTitle ?? "no")
-        // to implement
+        guard let action = sender.currentTitle else { return }
+        mainView?.setResultArea(withTitle: action)
+        // to implement work with model
     }
 }
 
@@ -36,6 +37,7 @@ extension CalculatorController {
         if indexPath.row == 0 {
             cell.backgroundColor = .black
             UILabel.addLabel(toView: cell)
+            mainView?.resultArea = cell
             return cell
         }
         

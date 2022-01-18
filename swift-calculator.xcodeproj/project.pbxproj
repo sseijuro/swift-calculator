@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		992964FE2795C3DC00E71461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992964FD2795C3DC00E71461 /* AppDelegate.swift */; };
 		992965002795C3DC00E71461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992964FF2795C3DC00E71461 /* SceneDelegate.swift */; };
-		992965022795C3DC00E71461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965012795C3DC00E71461 /* ViewController.swift */; };
 		992965072795C3DE00E71461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992965062795C3DE00E71461 /* Assets.xcassets */; };
 		9929650A2795C3DE00E71461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992965082795C3DE00E71461 /* LaunchScreen.storyboard */; };
 		992965122795C43600E71461 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965112795C43600E71461 /* CalculatorController.swift */; };
@@ -25,7 +24,6 @@
 		992964FA2795C3DC00E71461 /* swift-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992964FD2795C3DC00E71461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992964FF2795C3DC00E71461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		992965012795C3DC00E71461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		992965062795C3DE00E71461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		992965092795C3DE00E71461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9929650B2795C3DE00E71461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				9929651B2795C4BE00E71461 /* UIButton+extension.swift */,
 				9929651D2795C4DB00E71461 /* UICollectionViewLayout+extension.swift */,
 				992965112795C43600E71461 /* CalculatorController.swift */,
-				992965012795C3DC00E71461 /* ViewController.swift */,
 				992965062795C3DE00E71461 /* Assets.xcassets */,
 				992965082795C3DE00E71461 /* LaunchScreen.storyboard */,
 				9929650B2795C3DE00E71461 /* Info.plist */,
@@ -156,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9929651A2795C4AD00E71461 /* UILabel+extension.swift in Sources */,
-				992965022795C3DC00E71461 /* ViewController.swift in Sources */,
 				992965142795C44600E71461 /* CalculatorModel.swift in Sources */,
 				992965182795C49500E71461 /* Button+extension.swift in Sources */,
 				992964FE2795C3DC00E71461 /* AppDelegate.swift in Sources */,

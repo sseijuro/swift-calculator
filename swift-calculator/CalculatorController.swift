@@ -1,52 +1,56 @@
 import UIKit
 
-class CalculatorController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    var model: CalculatorModel = CalculatorModel()
-    
-    private var mainView: CalculatorView? {
-        guard let view = view else { return nil }
-        return view as? CalculatorView
-    }
+class CalculatorController: UIViewController {
+    var model: CalculatorModelProtocol = CalculatorModel()
     
     override func loadView() {
-        view = CalculatorView()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        mainView?.calculatorCollection.delegate = self
-        mainView?.calculatorCollection.dataSource = self
+        super.loadView()
+        view = CalculatorView(frame: view.bounds)
     }
     
     @objc func buttonPressed(sender: UIButton) {
-        guard let action = sender.currentTitle else { return }
-        mainView?.setResultArea(withTitle: action)
-        // to implement work with model
+        guard let symbol = sender.currentTitle else { return }
+        model.processSymbol(symbol: symbol)
+        resultArea?.text = model.getValue
     }
 }
 
 extension CalculatorController {
+    private var resultArea: UILabel? {
+        guard let view = view as? CalculatorView else { return nil }
+        return view.resultArea
+    }
+    
+    private var calculatorCollection: UICollectionView? {
+        guard let view = view as? CalculatorView else { return nil }
+        return view.collection
+    }
+}
+
+extension CalculatorController: UICollectionViewDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculatorCollection?.delegate = self
+        calculatorCollection?.dataSource = self
+    }
+}
+
+extension CalculatorController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 19
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalculatorView.cellIdentifier, for: indexPath)
+        let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: ButtonCollectionViewCell.identifier,
+                                 for: indexPath) as! ButtonCollectionViewCell
+        let button = Button.getAll[indexPath.row]
         
-        if indexPath.row == 0 {
-            cell.backgroundColor = .black
-            UILabel.addLabel(toView: cell)
-            mainView?.resultArea = cell
-            return cell
-        }
+        cell.setTitle(withTitle: button.value)
+        cell.setColor(withColor: button.color)
+        cell.setFontSize(withSize: 32)
         
-        guard let buttonObj = mainView?.calculatorButtons[indexPath.row - 1] else {
-            return cell
-        }
-        
-        let button = UIButton.addButton(toView: cell, withTitle: buttonObj.value, withColor: buttonObj.color)
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        cell.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         
         return cell
     }

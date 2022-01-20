@@ -15,9 +15,8 @@
 		992965142795C44600E71461 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965132795C44600E71461 /* CalculatorModel.swift */; };
 		992965162795C46600E71461 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965152795C46600E71461 /* CalculatorView.swift */; };
 		992965182795C49500E71461 /* Button+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965172795C49500E71461 /* Button+extension.swift */; };
-		9929651A2795C4AD00E71461 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992965192795C4AD00E71461 /* UILabel+extension.swift */; };
-		9929651C2795C4BE00E71461 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929651B2795C4BE00E71461 /* UIButton+extension.swift */; };
 		9929651E2795C4DB00E71461 /* UICollectionViewLayout+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929651D2795C4DB00E71461 /* UICollectionViewLayout+extension.swift */; };
+		99D5E63827990602004FEAC0 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5E63727990602004FEAC0 /* ButtonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +30,8 @@
 		992965132795C44600E71461 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		992965152795C46600E71461 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		992965172795C49500E71461 /* Button+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+extension.swift"; sourceTree = "<group>"; };
-		992965192795C4AD00E71461 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
-		9929651B2795C4BE00E71461 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		9929651D2795C4DB00E71461 /* UICollectionViewLayout+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+extension.swift"; sourceTree = "<group>"; };
+		99D5E63727990602004FEAC0 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +69,9 @@
 				992965132795C44600E71461 /* CalculatorModel.swift */,
 				992965152795C46600E71461 /* CalculatorView.swift */,
 				992965172795C49500E71461 /* Button+extension.swift */,
-				992965192795C4AD00E71461 /* UILabel+extension.swift */,
-				9929651B2795C4BE00E71461 /* UIButton+extension.swift */,
 				9929651D2795C4DB00E71461 /* UICollectionViewLayout+extension.swift */,
 				992965112795C43600E71461 /* CalculatorController.swift */,
+				99D5E63727990602004FEAC0 /* ButtonCollectionViewCell.swift */,
 				992965062795C3DE00E71461 /* Assets.xcassets */,
 				992965082795C3DE00E71461 /* LaunchScreen.storyboard */,
 				9929650B2795C3DE00E71461 /* Info.plist */,
@@ -152,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9929651A2795C4AD00E71461 /* UILabel+extension.swift in Sources */,
 				992965142795C44600E71461 /* CalculatorModel.swift in Sources */,
 				992965182795C49500E71461 /* Button+extension.swift in Sources */,
 				992964FE2795C3DC00E71461 /* AppDelegate.swift in Sources */,
@@ -160,7 +156,7 @@
 				9929651E2795C4DB00E71461 /* UICollectionViewLayout+extension.swift in Sources */,
 				992965162795C46600E71461 /* CalculatorView.swift in Sources */,
 				992965122795C43600E71461 /* CalculatorController.swift in Sources */,
-				9929651C2795C4BE00E71461 /* UIButton+extension.swift in Sources */,
+				99D5E63827990602004FEAC0 /* ButtonCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

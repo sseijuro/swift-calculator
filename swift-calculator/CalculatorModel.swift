@@ -12,10 +12,10 @@ struct Number {
 }
 
 struct CalculatorModel {
-    var lhs: Number = Number(value: "")
-    var rhs: Number = Number(value: "")
-    var operation: String?
-    var error: String?
+    private var lhs: Number = Number(value: "")
+    private var rhs: Number = Number(value: "")
+    private var operation: String?
+    private var error: String?
 }
 
 extension CalculatorModel: CalculatorModelProtocol {
@@ -35,9 +35,6 @@ extension CalculatorModel: CalculatorModelProtocol {
             error = nil
             symbols[0].value == "." ? processDot() : processNumber(number: symbol)
         }
-        
-        print(lhs.value, rhs.value)
-        print(operation)
     }
 }
 
